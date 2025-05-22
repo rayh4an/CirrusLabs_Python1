@@ -20,7 +20,24 @@ print('Prime numbers between 1 - 25 are ' + str(outputPrimeNum(1, 25)))
 
 print('\nQuestion 2\n')
 
+def number_to_words(n):
+    p = inflect.engine()
+    return p.number_to_words(n)
 
+print('The number [523] converted to words is ' + str(number_to_words(523)))
 
 print('\nQuestion 3\n')
 
+def ticTacToe(board):
+    for i in range(len(board)):
+        print(" | ".join(board[i]))
+        if i < len(board) - 1:
+            print("-" * 9)
+
+board = [
+    ["1", "2", "3"],
+    ["4", "5", "6"],
+    ["7", "8", "9"]
+]
+
+ticTacToe(board)
